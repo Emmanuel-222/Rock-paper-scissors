@@ -15,3 +15,17 @@ function getHumanChoice() {
     } while (!['rock', 'paper', 'scissors'].includes(humanChoice));
     return humanChoice;
 }
+
+function playRound(humanChoice, computerChoice) {
+    if(humanChoice === computerChoice) {
+        alert(`It's a tie! Computer chose ${computerChoice}.`);
+    } else if(humanChoice === 'paper' && computerChoice === 'rock' || 
+              humanChoice === 'scissors' && computerChoice === 'paper' || 
+              humanChoice === 'rock' && computerChoice === 'scissors') {
+        humanScore++;
+        alert(`You won! Your current score: ${humanScore}, Computer score: ${computerScore}. Computer chose ${computerChoice}.`);
+    } else {
+        computerScore++;
+        alert(`Computer won! Your current score: ${humanScore}, Computer score: ${computerScore}. Computer chose ${computerChoice}.`);
+    }
+}
