@@ -7,3 +7,11 @@ function getComputerChoice() {
     let computerChoice = (Math.floor(Math.random() * 3));
     return options[computerChoice];
 }
+
+function getHumanChoice() {
+    let humanChoice;
+    do {
+        humanChoice = prompt("Enter Rock, Paper, or Scissors: ").toLowerCase();
+    } while (!['rock', 'paper', 'scissors'].includes(humanChoice));
+    return humanChoice;
+}
