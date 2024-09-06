@@ -29,3 +29,14 @@ function playRound(humanChoice, computerChoice) {
         alert(`Computer won! Your current score: ${humanScore}, Computer score: ${computerScore}. Computer chose ${computerChoice}.`);
     }
 }
+
+
+function playGame() {
+    for(let i = 0; i < 5; i++){
+        playRound(getHumanChoice(), getComputerChoice());
+    }
+    totalScore = `The final score is - Computer: ${computerScore}, Human: ${humanScore}`;
+    return totalScore;
+}
+
+console.log(playGame());
