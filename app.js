@@ -39,4 +39,4 @@ function playGame() {
     return totalScore;
 }
 
-console.log(playGame());
+playGame();
